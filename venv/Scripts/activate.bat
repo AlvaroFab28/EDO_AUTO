@@ -8,7 +8,7 @@ if defined _OLD_CODEPAGE (
     "%SystemRoot%\System32\chcp.com" 65001 > nul
 )
 
-set "VIRTUAL_ENV=C:\Users\alvar\OneDrive\Escritorio\Proyectos en Desarrollo\Automatizacion de Ecuaciones Diferenciales\EDO_Automatic\venv"
+set "VIRTUAL_ENV=C:\Users\alvar\OneDrive\Escritorio\Proyectos en Desarrollo\Automatizacion de Ecuaciones Diferenciales\EDO_Automatic con DB\venv"
 
 if not defined PROMPT set PROMPT=$P$G
 

@@ -17,7 +17,7 @@ import os
 import re
 from typing import List, Dict, Optional
 
-def listar_tex_files(directorio: str = "Banco") -> List[str]:
+def listar_tex_files(directorio: str = "data") -> List[str]:
     """Devuelve lista de archivos .tex en el directorio dado."""
     if not os.path.exists(directorio):
         return []
@@ -197,10 +197,10 @@ def parsear_latex(path: str) -> List[Dict[str, Optional[str]]]:
 if __name__ == "__main__":
     import argparse, pprint, sys
     parser = argparse.ArgumentParser(description="Parsear archivo .tex (estándar EDO)")
-    parser.add_argument("path", nargs="?", help="ruta al archivo .tex (p.ej. Banco/estandar.tex)")
+    parser.add_argument("path", nargs="?", help="ruta al archivo .tex (p.ej. data/estandar.tex)")
     args = parser.parse_args()
     if not args.path or not os.path.exists(args.path):
-        print("Usar: python latex_parser.py Banco/estandar.tex")
+        print("Usar: python latex_parser.py data/estandar.tex")
         sys.exit(1)
     res = parsear_latex(args.path)
     pprint.pprint(res, width=140)

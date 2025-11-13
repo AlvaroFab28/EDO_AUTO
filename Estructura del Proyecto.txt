@@ -1,0 +1,17 @@
+project/
+│
+├─ main.py                # Menú principal (flujo del usuario)
+├─ latex_parser.py        # Parser LaTeX 
+├─ db/
+│   ├─ EDO_DB.db        # SQLite DB
+│   └─ repository.py            # Funciones CRUD puras
+├─ services/
+│   └─ exercise_service.py # Lógica de negocio: validación, agregar múltiples ejercicios
+├─ data/
+│   ├─ 2.1 banco de preguntas.tex # Archivos  .tex que seran la fuente que leera el parser
+│   ├─ 2.2 banco de preguntas.tex
+│   └─ 2.3 banco de preguntas.tex
+└─ utils.py               # clear_screen, hacker_typing, etc.
+
+
+
