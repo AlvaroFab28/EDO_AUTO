@@ -1,9 +1,10 @@
-import os 
+import os
 import sys
 import time
 from rich.table import Table
 from rich.console import Console
-from latex_parser import listar_tex_files, parsear_latex  # ⚡ import correcto
+from rich.text import Text
+from latex_parser import listar_tex_files, parsear_latex
 
 console = Console()
 
@@ -12,50 +13,65 @@ def clear_screen():
 
 def show_title():
     print("=" * 120)
-    print("  🐍✨ EDO TITANS - GESTOR DE PRÁCTICAS ✨🐍".center(120))
+    print("  🐍✨ EDO VILLE - GESTOR DE PRÁCTICAS ✨🐍".center(120))
     print("=" * 120)
 
 def show_menu():
     print("\n¿Qué quieres hacer hoy?\n")
-    print("1) 📥 Cargar ejercicios desde LaTeX (simulación, sin DB)")
+    print("1) 📥 Cargar ejercicios desde LaTeX a la DB")
     print("2) 🛠️ CRUD de ejercicios en la DB")
     print("3) 🎲 Generar práctica aleatoria")
     print("4) 📜 Ver historial de semestres")
     print("5) 🚪 Salir\n")
 
 def mostrar_tabla(ejercicios):
-    """
-    Muestra los ejercicios en consola en una tabla con colores.
-    """
-    table = Table(title="📚 Ejercicios Leídos")
+    table = Table(title="📚 Ejercicios Leídos (vista completa)")
 
     # Columnas
     table.add_column("N°", justify="center", style="cyan", no_wrap=True)
-    table.add_column("Sección", style="magenta")
-    table.add_column("Subsección", style="magenta")
+    table.add_column("Tema", style="magenta")
+    table.add_column("SubTema", style="magenta")
     table.add_column("Enunciado", style="green")
     table.add_column("Condiciones", style="red")
     table.add_column("Respuesta", style="yellow")
     table.add_column("Archivo", style="blue")
 
-    # Filas
     for i, ej in enumerate(ejercicios, start=1):
-        enunciado_line = ej['enunciado'].replace("\n", " ")
-        respuesta_line = ej['respuesta'].replace("\n", " ")
-        condiciones_line = ej['condiciones'].replace("\n", " ") if ej.get('condiciones') else "-"
+        # Enunciado y respuesta: dejar LaTeX intacto, quitar saltos de línea para mostrar en una línea
+        enunciado_raw = ej.get('enunciado') or ""
+        enunciado_line = " ".join(enunciado_raw.splitlines()).strip()
+
+        respuesta_raw = ej.get('respuesta') or ""
+        respuesta_line = " ".join(respuesta_raw.splitlines()).strip()
+
+        # Condiciones: aceptar tanto str como lista/tupla
+        cond_raw = ej.get('condiciones')
+        if cond_raw is None:
+            condiciones_line = ""
+        elif isinstance(cond_raw, (list, tuple)):
+            # si el parser devolviera lista de condiciones, unir con '; '
+            condiciones_line = "; ".join(str(x).strip() for x in cond_raw if x is not None)
+        else:
+            # es un string (caso normal): usar tal cual (sin hacer join por caracteres)
+            condiciones_line = str(cond_raw).strip()
+
+        # Usar Text para evitar que Rich interprete markup en el contenido (LaTeX)
+        enunciado_text = Text(enunciado_line)
+        condiciones_text = Text(condiciones_line)
+        respuesta_text = Text(respuesta_line)
 
         table.add_row(
-            str(i),
-            ej['seccion'],
-            ej.get('subseccion', "-"),
-            enunciado_line,
-            condiciones_line,
-            respuesta_line,
-            ej['archivo_origen']
+            str(ej.get('numero', i)),
+            Text(ej.get('tema') or ""),
+            Text(ej.get('subtema') or ""),
+            enunciado_text,
+            condiciones_text,
+            respuesta_text,
+            Text(ej.get('archivo_origen') or "")
         )
 
-    # Imprimir tabla
     console.print(table)
+
 
 def opcion_cargar_latex():
     clear_screen()
@@ -91,17 +107,7 @@ def opcion_cargar_latex():
     # Mostrar tabla
     mostrar_tabla(ejercicios)
 
-    # Preguntar si guardar
-    decision = input("\n¿Deseas guardar estos ejercicios en la DB? (s/n): ").strip().lower()
-    if decision == "s":
-        print("\n[+] Guardado en DB (simulado por ahora).")
-    else:
-        print("\n[-] Operación cancelada, no se guardó nada.")
-
     input("\nPresiona ENTER para volver al menú...")
-
-    #print("\n[⚡] Nota: en este modo no guardamos nada en DB todavía.")
-    #input("\nPresiona ENTER para volver al menú...")
 
 def main():
     while True:

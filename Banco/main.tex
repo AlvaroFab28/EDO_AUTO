@@ -1,0 +1,144 @@
+% Archivo: Banco/estandar.tex
+\documentclass{article}
+\usepackage[utf8]{inputenc}
+\usepackage{amsmath,amssymb}
+\usepackage{graphicx}
+
+\title{Banco de Ejercicios EDO}
+\author{Molina Yampa}
+\date{Septiembre 2025}
+
+\begin{document}
+\maketitle
+
+% -------------------------
+% Formato estándar de parser:
+% - Cada ejercicio va entre:
+%     %% EXERCISE_START
+%     ... (un \[ ... \] con el ENUNCIADO)
+%     ... (un \[ ... \] con la RESPUESTA)
+%     %% EXERCISE_END
+% - Si la condición existe, debe escribirse inline al final del primer \[ ... \]
+%   utilizando la secuencia: ", \quad <condición>" (ej.: ", \quad y(0)=1").
+% - El parser tomará la última \section / \section* previa como "sección" y la última
+%   \subsection / \subsection* previa como "subsección".
+% -------------------------
+
+\section{Ecuaciones Diferenciales de Variable Separable}
+
+%% EXERCISE_START
+% id: 1
+1)
+\[
+\tan x \cdot \sin^2 y \, dx + \cos^2 x \cdot \cot y \, dy = 0, \quad y(1) = 2
+\]
+\[
+c\,\tan^2 y = \tan^2 x + C
+\]
+%% EXERCISE_END
+
+\vspace{8pt}
+
+%% EXERCISE_START
+% id: 2
+2)
+\[
+xy' - y = y^3
+\]
+\[
+x = \frac{c\,y}{\sqrt{1 + y^2}}
+\]
+%% EXERCISE_END
+
+\vspace{8pt}
+
+%% EXERCISE_START
+% id: 3
+3)
+\[
+\sqrt{1 + x^3}\,\frac{dy}{dx} = x^2 y + x^2
+\]
+\[
+2\sqrt{1 + x^3} = 3\ln(y + 1) + C
+\]
+%% EXERCISE_END
+
+\vspace{8pt}
+
+%% EXERCISE_START
+% id: 4
+4)
+\[
+\sin 2x \, dx + \cos 3y \, dy = 0, \quad y\!\left(\frac{\pi}{2}\right) = \frac{\pi}{3}
+\]
+\[
+2 \sin 3y - 3 \cos 2x = 3
+\]
+%% EXERCISE_END
+
+\vspace{8pt}
+
+%% EXERCISE_START
+% id: 5
+5)
+\[
+y' - 2y \cot x = 0, \quad y\!\left(\frac{\pi}{2}\right) = 2
+\]
+\[
+y = 2 \sin x
+\]
+%% EXERCISE_END
+
+% -------------------------
+% Nuevo subtema: solución particular con condiciones
+% (sección visible; el parser tomará todo lo que venga hasta nueva sección)
+% -------------------------
+\section*{II. Encontrar la solución particular de la ecuación diferencial, mediante las condiciones dadas.}
+
+\vspace{6pt}
+
+%% EXERCISE_START
+% id: II-1
+1)
+\[
+\frac{dy}{dx} = \frac{x - y}{1 + y'}, \quad y(0) = 1
+\]
+\[
+3y^2 + 2y^3 = 3x^2 + 5
+\]
+%% EXERCISE_END
+
+\vspace{8pt}
+
+%% EXERCISE_START
+% id: II-2
+2)
+\[
+x(y^6 + 1)\,dx + y^2(x^4 + 1)\,dy = 0, \quad y(0) = 1
+\]
+\[
+3 \arctan x^2 + 2 \arctan y^3 = \frac{\pi}{2}
+\]
+%% EXERCISE_END
+
+\vspace{8pt}
+
+%% EXERCISE_START
+% id: II-3
+3)
+\[
+y' \sin x = y \ln y,\quad y\!\left(\frac{\pi}{2}\right) = e
+\]
+\[
+y = e^{\frac{x}{2}}
+\]
+%% EXERCISE_END
+
+\vspace{10pt}
+
+% Puedes añadir más ejercicios repitiendo exactamente este patrón.
+% El parser no necesita ver "Enunciado/Respuesta/Condición" en texto:
+% usa los comentarios %% EXERCISE_START / %% EXERCISE_END y los bloques \[...\] para encontrar los campos.
+% Las condiciones deben ir inline dentro del primer \[...\] con ", \quad <condición>".
+
+\end{document}
