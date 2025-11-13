@@ -1,0 +1,651 @@
+\documentclass{article}
+\usepackage{graphicx} % Required for inserting images
+
+\title{Banco Ejercicios MAT207 Espinoza}
+\author{molina.luis}
+\date{Agosto 2025}
+
+\begin{document}
+
+\maketitle
+
+\section{2.2) Ecuaciones Diferenciales Ordinarias Reducibles a Variable Separable}
+
+1)
+\[
+\frac{dy}{dx} = \cos(x + y)
+\]
+\textbf{Rpta: }
+\[
+y = 2\arctan(x + C) - x
+\]
+
+\vspace{10pt}
+
+2)
+\[
+\frac{dy}{dx} = \sin^2(x - y + 1)
+\]
+\textbf{Rpta: }
+\[
+\tan(x - y + 1) = x + C
+\]
+
+\vspace{10pt}
+
+3)
+\[
+\frac{dy}{dx} = \frac{x + y}{x + y + 2}
+\]
+\textbf{Rpta: }
+\[
+y + \ln|x + y + 1| = x + C
+\]
+
+\vspace{10pt}
+
+4)
+\[
+y'\,\ln|x - y| = 1 + \ln|x - y|
+\]
+\textbf{Rpta: }
+\[
+(x - y)\,\ln|x - y| = C - y
+\]
+
+\vspace{10pt}
+
+5)
+\[
+y' = (x + y)^2
+\]
+\textbf{Rpta: }
+\[
+x + y = \tan(x + C)
+\]
+
+\vspace{10pt}
+
+6)
+\[
+(x + y - 1)\,dx + (2x + 2y - 3)\,dy = 0
+\]
+\textbf{Rpta: }
+\[
+x + 2y + \ln|x + y - 2| = C
+\]
+
+\vspace{10pt}
+
+7)
+\[
+(1 + x^2 y^2)\,y + (xy - 1) x^2 y = 0 \quad \text{sug.: } xy = z
+\]
+\textbf{Rpta: }
+\[
+y^2 = k\,e^{\frac{xy}{xy}}
+\]
+
+\vspace{10pt}
+
+8)
+\[
+(x^6 - 2x^5 + 2x^4 - y^3 + 4x^2 y)\,dx + (x y^2 - 4x^3)\,dy = 0 \quad \text{sug.: } y = xz
+\]
+\textbf{Rpta: }
+\[
+\frac{x^3}{3} - x^2 + 2x + \frac{y^3}{3x^3} - \frac{4y}{x} = C
+\]
+
+\vspace{10pt}
+
+9)
+\[
+y' = \frac{y - x + 1}{y - x + 5}
+\]
+\textbf{Rpta: }
+\[
+(y - x)^2 + 10y - 2x = C
+\]
+
+\vspace{10pt}
+
+10)
+\[
+y e^{xy}\,dx + \bigl(y^2 - 2x e^{x y^2}\bigr)\,dy = 0
+\]
+\textbf{Rpta: }
+\[
+\ln y + e^{y^2} = C
+\]
+
+\vspace{10pt}
+
+11)
+\[
+y' = \sin(x - y)
+\]
+\textbf{Rpta: }
+\[
+x + C = K\!\left(\frac{y - x}{2} + \frac{\pi}{4}\right)
+\]
+
+\vspace{10pt}
+
+12)
+\[
+y' = (8x + 2y + 1)^2
+\]
+\textbf{Rpta: }
+\[
+8x + 2y + 1 = 2\,\tan(4x + C)
+\]
+
+\vspace{10pt}
+
+13)
+\[
+(x^2 y^3 + xy - 2)\,dx + (x^3 y^2 + x)\,dy = 0
+\]
+\textbf{Rpta: }
+\[
+3x^2 - 12x + 2x^3 y^3 + 6xy = C
+\]
+
+\vspace{10pt}
+
+14)
+\[
+(1 - xy\cos(xy))\,dx - x^2 \cos(xy)\,dy = 0
+\]
+\textbf{Rpta: }
+\[
+\ln x - \sin(xy) = C
+\]
+
+\vspace{10pt}
+
+15)
+\[
+\biggl[x^2 \sin\!\Bigl(\frac{y}{x^2}\Bigr) - 2y \cos\!\Bigl(\frac{y}{x^2}\Bigr)\biggr]\,dx + x \cos\!\Bigl(\frac{y}{x^2}\Bigr)\,dy = 0
+\]
+\textbf{Rpta: }
+\[
+x \sin\!\Bigl(\frac{y}{x^2}\Bigr) = C
+\]
+
+\vspace{10pt}
+
+16)
+\[
+e^y y' = k(x + e^y) - 1
+\]
+\textbf{Rpta: }
+\[
+\text{sug.: } Z = x + e^y
+\]
+
+\vspace{10pt}
+
+17)
+\[
+x^2 y' = \tfrac{1}{2}\tan(x^2 y^2) - x y^2
+\]
+\textbf{Rpta: }
+\[
+\text{sug.: } z = x^2 y^2
+\]
+
+\vspace{10pt}
+
+18)
+\[
+y' = ax + by + c,\quad a,b,c\in\mathbb{R}
+\]
+\textbf{Rpta: }
+\[
+b(ax + by + c) + a = C e^{bx}
+\]
+
+\vspace{10pt}
+
+19)
+\[
+(xy - 2xy\ln y + y\ln y)\,dx + (2x^2 \ln y + x)\,dy = 0
+\]
+\textbf{Rpta: }
+\[
+\frac{1}{1 - xy} - \ln x = C
+\]
+
+\vspace{10pt}
+
+20)
+\[
+(xy - 2xy\ln y + y\ln y)\,dx + (2x^2 \ln y + x)\,dy = 0
+\]
+\textbf{Rpta: }
+\[
+2x^2 + (2x \ln y + 1)^2 = C
+\]
+
+\vspace{10pt}
+
+21)
+\[
+(2x + 3y - 1)\,dx + (4x + 6y - 5)\,dy = 0
+\]
+\textbf{Rpta: }
+\[
+x + 2y + 3\ln(2x + 3y - 7) = C
+\]
+
+\vspace{10pt}
+
+22)
+\[
+(2x - y)\,dx + (4x - 2y + 3)\,dy = 0
+\]
+\textbf{Rpta: }
+\[
+5x + 10y = 3\ln|10x - 5y + 6| + C
+\]
+
+\vspace{10pt}
+
+23)
+\[
+(6x + 3y - 5)\,dx - (2x + y)\,dy = 0
+\]
+\textbf{Rpta: }
+\[
+3x - y + \ln(2x + y - 1) = C
+\]
+
+\vspace{10pt}
+
+24)
+\[
+\bigl(x^3 y^4 + y^5 x^5 + x^5 y^2 + y^7 + y^5\bigr)\,dx - \bigl(x^4 y^3 + x^6 y + xy^6\bigr)\,dy = 0
+\]
+\textbf{Rpta: }
+\[
+\frac{x^3}{3} + x - \frac{1}{2x^2} - \frac{y^2}{2x^2} + \frac{x}{y} + \frac{x^3}{3y^3} = C
+\]
+
+\vspace{10pt}
+
+\section*{Mediante una sustitución adecuada reducir la ecuación diferencial.}
+
+26)
+\[
+(2 + 4x^2 \sqrt{y})\,y\,dx + x^3 \sqrt{y}\,dy = 0
+\]
+\textbf{Rpta: }
+\[
+x^3 y^{1/2} = C
+\]
+
+\vspace{10pt}
+
+27)
+\[
+y(x + 1)\,dx + x(1 + xy + x^2 y^2)\,dy = 0
+\]
+\textbf{Rpta: }
+\[
+\frac{2xy + 1}{2x^2 y^2} = \ln(k y)
+\]
+
+\vspace{10pt}
+
+28)
+\[
+(y - xy^2)\,dx - (x + x^2)\,dy = 0
+\]
+\textbf{Rpta: }
+\[
+\ln\!\left(\frac{x}{y}\right) - xy = C
+\]
+
+\vspace{10pt}
+
+29)
+\[
+(y - xy^2 + x^2 y^3)\,dx + (x^3 y^2 - x^2 y)\,dy = 0
+\]
+\textbf{Rpta: }
+\[
+2\ln x + x^2 y^2 - 2xy = k
+\]
+
+\vspace{10pt}
+
+30)
+\[
+\frac{dy}{dx} = \frac{1 + xy^3}{1 + x^3 y} \quad \text{sug.: } u = x + y,\ v = xy
+\]
+\textbf{Rpta: }
+\[
+x y^2 - 1 = k(x + y)^2
+\]
+
+\vspace{10pt}
+
+31)
+\[
+\frac{dy}{dx} = \frac{e^y}{2y - x e^y}
+\]
+\textbf{Rpta: }
+\[
+y^2 = x e^y + C
+\]
+
+\vspace{10pt}
+
+32)
+\[
+\frac{dy}{dx} = \tan(x + y)
+\]
+\textbf{Rpta: }
+\[
+x - y - \ln|\sin(x + y) + \cos(x + y)| = C
+\]
+
+\vspace{10pt}
+
+33)
+\[
+\frac{dy}{dx} = \frac{1}{\ln(2x + y + 3) + 1}
+\]
+\textbf{Rpta: }
+\[
+(2x + y + 3)\ln|2x + y + 3| = x + C
+\]
+
+\vspace{10pt}
+
+34)
+\[
+\frac{dy}{dx} = x^2 + y - 1, \quad z = x^2 + 2x + y
+\]
+\textbf{Rpta: }
+\[
+2x + x^2 + y + 1 = k e^{x}
+\]
+
+\vspace{10pt}
+
+35)
+\[
+(x^2 - y^4)\,dy = xy \quad \text{sug.: } x = uy
+\]
+\textbf{Rpta: }
+\[
+2y^5 = -3x^2 + k y^2
+\]
+
+\vspace{10pt}
+
+36)
+\[
+(3x - 2y + 1)\,dx + (3x - 2y + 3)\,dy = 0
+\]
+\textbf{Rpta: }
+\[
+5(x + y) = 2 \ln|15x - 10y + 11| + C
+\]
+
+\vspace{10pt}
+
+37)
+\[
+y' = \tfrac{1}{2}\,\tan^2(x + 2y)
+\]
+\textbf{Rpta: }
+\[
+4y - 2x + \sin(2x + 4y) = C
+\]
+
+\vspace{10pt}
+
+38)
+\[
+y' = \sqrt{2x + 3y}
+\]
+\textbf{Rpta: }
+\[
+6\sqrt{2x + 3y} - 4 \ln\!\bigl(3\sqrt{2x + 3y} + 2\bigr) - 9x = C
+\]
+
+\vspace{10pt}
+
+39)
+\[
+y' = \sqrt{y + \sin x - \cos x}
+\]
+\textbf{Rpta: }
+\[
+\sqrt{\,y + \sin x\,} = \frac{x}{2} + C
+\]
+
+\vspace{10pt}
+
+40)
+\[
+\sqrt{x + y + 1}\,y' = \sqrt{x + y - 1}
+\]
+\textbf{Rpta: }
+\[
+u^2 + 2u - u\sqrt{u^2 - 1} + \ln|u + \sqrt{u^2 - 1}| = 4x + C,\quad u = x + y
+\]
+
+\vspace{10pt}
+
+41)
+\[
+\bigl(x + y - 2 + \tfrac12\bigr)\,dx + \bigl(2x - (2 - y)\bigr)\,dy = 0
+\]
+\textbf{Rpta: }
+\[
+2\ln x - 4x + 4y - (x + y)^2 = k
+\]
+
+\vspace{10pt}
+
+42)
+\[
+(2x - xy + x^2)\,dx - (2x - 2y - 1)\,dy = 0
+\]
+\textbf{Rpta: }
+\[
+(x - 1)e^x + (x - y^2) + y = C
+\]
+
+\vspace{10pt}
+
+43)
+\[
+\{\sin x - \tan(x - 2y)\}\,dx + 2\tan(x - 2y)\,dy = 0
+\]
+\textbf{Rpta: }
+\[
+-\cos x + \ln\!\bigl(\cos(x - 2y)\bigr) = C
+\]
+
+\vspace{10pt}
+
+44)
+\[
+(1 - xy + x^2 y^2)\,dx + (x^3 y^2 - x^2 y)\,dy = 0
+\]
+\textbf{Rpta: }
+\[
+2\ln x + x^2 y^2 - 2xy = C
+\]
+
+\vspace{10pt}
+
+45)
+\[
+y^5 \arcsin\!\left(\frac{x}{\sqrt{1 + x}}\right)\,dx + dy = 0
+\]
+\textbf{Rpta: }
+\[
+\sqrt{x}\,\arctan\!\left(\sqrt{x} - \ln\!\left(1 + \frac{y - 1}{y}\right)\right) + 6y^2 + 3y + 2 = C
+\]
+
+\vspace{10pt}
+
+46)
+\[
+2y\,y' = y^2 + x^2 - 2x
+\]
+\textbf{Rpta: }
+\[
+y^2 = c\,e^{x} - x^2
+\]
+
+\vspace{10pt}
+
+47)
+\[
+y' + \sin^2(x + y) = 0
+\]
+\textbf{Rpta: }
+\[
+\tan(x + y) = x + C
+\]
+
+\vspace{10pt}
+
+48)
+\[
+y' = (x + y)\ln(x + y) - 1
+\]
+\textbf{Rpta: }
+\[
+\ln|x + y| = c\,e^{x}
+\]
+
+\vspace{10pt}
+
+49)
+\[
+2\bigl(x^2 y + \sqrt{1 + x^4 y^2}\bigr)\,dx + x^3\,dy = 0
+\]
+\textbf{Rpta: }
+\[
+x^2\!\left(x^2 y + \sqrt{1 + x^4 y^2}\right) = C
+\]
+
+\vspace{10pt}
+
+50)
+\[
+xy\,(x\,dy + y\,dx) = 6y^3\,dy,\quad x=2,\ y=1
+\]
+\textbf{Rpta: }
+\[
+y^2(x^2 - 3y^2) = 1
+\]
+
+\vspace{10pt}
+
+51)
+\[
+x^2\,(dx + y\,dy) = (x^2 + y^2)\,dx,\quad x=1,\ y=2
+\]
+\textbf{Rpta: }
+\[
+(x^2 + y^2)(10 - 9x) = 5x
+\]
+
+\vspace{10pt}
+
+52)
+\[
+dx + dy = (x + y)\!\left(1 + \frac{y}{x}\right)\!(x\,dy - y\,dx)
+\]
+\textbf{Rpta: }
+\[
+(2y + c x)(x + y)^2 + x = 0
+\]
+
+\vspace{10pt}
+
+53)
+\[
+(x^2 + y^2)(x\,dy + y\,dx) - xy(x\,dy + y\,dx) = 0
+\]
+\textbf{Rpta: }
+\[
+x^2 y^2 = C(x^2 + y^2)
+\]
+
+\vspace{10pt}
+
+54)
+\[
+y^2(x^2 + 2)\,dx + (x^3 + y^3)(y\,dx - x\,dy) = 0
+\]
+\textbf{Rpta: }
+\[
+\frac{1}{x^2} - \frac{x}{y} - \frac{y^2}{2x^2} = C
+\]
+
+\vspace{10pt}
+
+55)
+\[
+(6x - 3y + 2)\,dx - (2x - y - 1)\,dy = 0
+\]
+\textbf{Rpta: }
+\[
+3x - y = 5\ln|2x - y + 4| + C
+\]
+
+\vspace{10pt}
+
+56)
+\[
+\frac{dy}{dx} = (x + y - 3)^2 - 2(x + y - 3)
+\]
+\textbf{Rpta: }
+\[
+\frac{1}{x + y - 4} = x + C
+\]
+
+\vspace{10pt}
+
+57)
+\[
+\frac{dy}{dx} = -2 + e^{2x - y + 1}
+\]
+\textbf{Rpta: }
+\[
+x + e^{2x - y + 1} = C
+\]
+
+\vspace{10pt}
+
+58)
+\[
+(1 - x^2 y)\,dx + x^2 (y - x)\,dy = 0 \quad \text{sug.: } z = x - y
+\]
+\textbf{Rpta: }
+\[
+y^2 - 2xy + 2x^2 + \frac{2}{x} = k
+\]
+
+\vspace{10pt}
+
+59)
+\[
+y' = (8x + 2y)^2 + 2(8x + 2y + 1)
+\]
+\textbf{Rpta: }
+\[
+\arctan(4x + y) = 4x + k
+\]
+\end{document}
